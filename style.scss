@@ -4,8 +4,10 @@ $bg-color: hsl(30, 38%, 92%);
 
 //  Neutral
 $heading-color: hsl(212, 21%, 14%);
-$text-color: hsl(228, 12%, 48%);
+$text-color: hsl(227, 21%, 65%);
 $carr-bg: hsl(0, 0%, 100%);
+$font-1 : 'Fraunces', serif;
+$font-2 : 'Montserrat', sans-serif;
 
 * {
     margin: 0;
@@ -15,6 +17,154 @@ $carr-bg: hsl(0, 0%, 100%);
 
 body {
     font-size: 15px;
-    font-family: 'Fraunces', serif;
-    font-family: 'Montserrat', sans-serif;  
+    font-family: $font-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 1px);
+    background-color: $bg-color;  
+    margin: 1rem;
+    color: $heading-color;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: $carr-bg;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    background-color: $carr-bg;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-content {
+    padding: 1.3rem;
+}
+
+.card-tag {
+    font-size: 0.8rem;
+    color: $text-color;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.card-name {
+    font-family: $font-1;
+    line-height: .9;
+    margin: 1rem 0;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.card-des {
+    color: $text-color;
+    font-size: .8rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.price-group {
+    display: flex;
+    align-items: center;
+    font-family: $font-1;
+    margin-bottom: 0.5rem;
+}
+
+.card-price {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-right: 1rem;
+}
+
+.card-dis {
+    font-family: $font-2;
+    color: $text-color;
+    text-decoration: line-through;
+}
+
+.card-btn {
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 10px;
+    background-color: $primary-color;
+    color: $carr-bg;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all .3s ease-in-out;
+}
+
+.card-btn:hover {
+    background-color: hsl(158, 42%, 18%);
+}
+
+.btn-name {
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 1140px) {
+    .card {
+        flex-direction: row;
+        width: 900px;
+        height: 700px;
+    }
+
+    .card-image {
+        background-size: cover;
+        
+    }
+
+    .card-content {
+        padding: 3rem;
+        width: 700px;
+    }
+
+    .card-tag {
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+    }
+
+    .card-name {
+        line-height: 1;
+        font-size: 3.3rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+    }
+
+    .card-des {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .card-price {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card-dis {
+        font-size: 1.2rem;
+        padding-bottom: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .card-btn {
+        
+        margin-top: 2rem;
+    }
+
+    .btn-name {
+        font-size: 1rem;
+        padding: 1rem;
+        
+    }
 }
